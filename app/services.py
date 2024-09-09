@@ -29,3 +29,11 @@ class TaskService:
             TaskRepository.delete_task(task)
         else:
             raise ValueError("The task was not found")
+
+    @staticmethod
+    def search_tasks_by_content(content: str):
+        return TaskRepository.search_tasks_by_content(content)
+
+    @staticmethod
+    def get_tasks_by_complete(complete: bool):
+        return TaskRepository.get_tasks_by_complete(complete)
